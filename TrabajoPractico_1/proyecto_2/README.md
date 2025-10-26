@@ -1,18 +1,58 @@
-# 🐍Nombre del proyecto (darle un nombre significativo) 
-
+# 🐍Proyecto “Mazo de Cartas”
 Breve descripción del proyecto:
 
-Ejemplo: “Este es un script en el que se comparan algoritmos de ordenamiento. Permite [describir funcionalidades principales].
+Este proyecto implementa un mazo de cartas usando una lista doblemente enlazada.
+Permite:
 
+Agregar cartas al inicio o al final del mazo.
+
+Sacar cartas del mazo de manera controlada.
+
+Obtener el tamaño del mazo y recorrerlo en orden.
+
+Medir el desempeño de las operaciones y analizar su complejidad.
 ---
 ## 🏗Arquitectura General
 
-Explica brevemente cómo está organizado el código (funciones y/o clases)
+El código está organizado de manera modular:
 
-Las gráficas de los resultados están disponible en la carpeta [data](./data) del proyecto.
+modulos/mazo.py → contiene la clase Mazo con todas las operaciones del TAD.
 
-El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
+modulos/lista_doble1.py → lista doblemente enlazada utilizada internamente por el mazo.
 
+test_juego_guerra.py → ejecuta pruebas con mazos de distintos tamaños, verifica resultados y genera gráficas de tiempos de ejecución.
+
+test_mazo.py → ejecuta pruebas con el mazo.
+
+data/ → carpeta donde se guardan las gráficas generadas.
+
+docs/ → carpeta donde se encuentra el informe completo en PDF.
+
+Las gráficas de los resultados están disponibles en la carpeta data
+ del proyecto.
+El informe completo está disponible en la carpeta docs
+ del proyecto.
+Ejercicio 2 – Mazo de Cartas
+
+Implementa un mazo de cartas usando la lista doblemente enlazada.
+
+Operaciones principales:
+
+poner_carta_arriba → O(1)
+
+poner_carta_abajo → O(1)
+
+sacar_carta_arriba → O(1)
+
+__len__ → O(1)
+
+__str__ → O(n)
+
+Se realizaron pruebas con mazos de 500 cartas aleatorias.
+
+Se verificó que las operaciones mantienen el orden esperado y que los resultados son correctos.
+
+Se pueden generar gráficas de la evolución del tamaño del mazo durante la ejecución.
 ---
 ## 📑Dependencias
 
@@ -36,9 +76,10 @@ El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
 ---
 ## 🙎‍♀️🙎‍♂️Autores
 
-- Apellido y Nombre del primer integrante
-- Apellido y Nombre del primer integrante
-
+- Zapata Mariana Gabriela
+- Weimer Valentin
+- Kerbs Javier
 ---
 
 > **Consejo**: Mantén el README **actualizado** conforme evoluciona el proyecto, y elimina (o añade) secciones según necesites. Esta plantilla es sólo un punto de partida general.
+

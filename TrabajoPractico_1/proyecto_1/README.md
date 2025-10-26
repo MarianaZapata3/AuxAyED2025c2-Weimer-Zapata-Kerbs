@@ -1,17 +1,51 @@
-# 🐍Nombre del proyecto (darle un nombre significativo) 
-
+<<<<<<< HEAD
+# 🐍Proyecto “Lista Doble Enlazada”
 Breve descripción del proyecto:
 
-Ejemplo: “Este es un script en el que se comparan algoritmos de ordenamiento. Permite [describir funcionalidades principales].
+Este proyecto implementa un Tipo Abstracto de Datos (TAD) de lista doblemente enlazada.
+Permite:
 
----
+Leer la cantidad de elementos de la lista, es decir su longitud.
+
+Copiar elementos de la lista.
+
+Invertir la lista.
+
+Medir la eficiencia de las operaciones y analizar su complejidad.
+
 ## 🏗Arquitectura General
 
-Explica brevemente cómo está organizado el código (funciones y/o clases)
+<<<<<<< HEAD
+El código está organizado de manera modular:
 
-Las gráficas de los resultados están disponible en la carpeta [data](./data) del proyecto.
+modulos/lista_doble1.py → contiene la clase ListaDobleEnlazada con todas las operaciones del TAD.
 
-El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
+test_lista.py → ejecuta pruebas con listas de distintos tamaños, verifica resultados.
+
+grafico1.py →  genera gráficas de tiempos de ejecución.
+
+data/ → carpeta donde se guardan las gráficas generadas.
+
+docs/ → carpeta donde se encuentra el informe completo en PDF.
+
+
+ Ejercicio 1 – Lista Doble Enlazada
+
+Implementa un TAD de lista doblemente enlazada.
+
+Operaciones principales: copiar, leer e invertir los elementos dicha lista implementada.
+
+Se realizaron pruebas con listas de 500 elementos aleatorios para verificar que todas las operaciones funcionan correctamente.
+
+Se midieron tiempos de ejecución para cada operación y se generaron gráficas comparando los resultados con la complejidad teórica:
+
+Copiar la lista → O(n)
+
+
+Longitud de la lista (len) → O(1)
+
+
+Invertir la lista → O(n)
 
 ---
 ## 📑Dependencias
@@ -36,9 +70,13 @@ El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
 ---
 ## 🙎‍♀️🙎‍♂️Autores
 
-- Apellido y Nombre del primer integrante
-- Apellido y Nombre del primer integrante
+- Zapata Mariana Gabriela
+- Weimer Valentin
+- Kerbs Javier
+<<<<<<< HEAD
+=======
 
 ---
 
 > **Consejo**: Mantén el README **actualizado** conforme evoluciona el proyecto, y elimina (o añade) secciones según necesites. Esta plantilla es sólo un punto de partida general.
+

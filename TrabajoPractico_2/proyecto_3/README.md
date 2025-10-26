@@ -1,18 +1,41 @@
-# 🐍Nombre del proyecto (darle un nombre significativo) 
+# Proyecto “Palomas Mensajeras”
+📖 Descripción General
 
-Breve descripción del proyecto:
+Este proyecto modela el sistema de comunicación por palomas mensajeras entre distintas aldeas, con el objetivo de encontrar la forma más eficiente de enviar un mensaje desde la aldea central “Peligros” hacia todas las demás aldeas del reino.
 
-Ejemplo: “Este es un script en el que se comparan algoritmos de ordenamiento. Permite [describir funcionalidades principales].
+Cada aldea cuenta con un palomar propio y puede enviar mensajes únicamente a sus aldeas vecinas (aquellas conectadas por rutas directas).
+El archivo aldeas.txt contiene la lista de aldeas y las distancias en leguas entre cada par conectado.
 
+El sistema busca minimizar el total de distancias recorridas por las palomas, garantizando que:
+
+Cada aldea reciba la noticia una sola vez.
+
+Una vez que una aldea recibe la noticia, puede replicarla y enviarla a sus vecinas.
+
+Desde “Peligros” parten inicialmente una o más palomas.
 ---
-## 🏗Arquitectura General
+## 🏗 Funcionalidad
+El programa:
 
-Explica brevemente cómo está organizado el código (funciones y/o clases)
+Lee los datos de las aldeas y las distancias desde data/aldeas.txt.
 
-Las gráficas de los resultados están disponible en la carpeta [data](./data) del proyecto.
+Crea un grafo no dirigido y ponderado donde los vértices son aldeas y las aristas representan rutas posibles.
 
-El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
+Aplica un algoritmo de Árbol de Expansión Mínima (MST), como Kruskal, para encontrar la forma más eficiente de conectar todas las aldeas con la mínima distancia total.
 
+Determina:
+
+La aldea de origen (“Peligros”).
+
+Para cada aldea, de qué vecina recibe la noticia.
+
+A qué vecinas envía la noticia una vez recibida.
+
+Muestra:
+
+La lista de aldeas ordenadas alfabéticamente.
+
+La suma total de distancias recorridas por todas las palomas.
 ---
 ## 📑Dependencias
 
@@ -36,8 +59,9 @@ El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
 ---
 ## 🙎‍♀️🙎‍♂️Autores
 
-- Apellido y Nombre del primer integrante
-- Apellido y Nombre del primer integrante
+- Zapata Mariana Gabriela 
+- Weimer Valentin
+- Kerbs Javier
 
 ---
 

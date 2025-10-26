@@ -1,17 +1,52 @@
-# 🐍Nombre del proyecto (darle un nombre significativo) 
+# 🐍Proyecto “Temperaturas_DB”
+Breve descripción del proyecto
 
-Breve descripción del proyecto:
+El proyecto “Temperaturas_DB” implementa una base de datos en memoria para registrar y consultar temperaturas de la Tierra asociadas a fechas específicas.
+Cada registro está compuesto por:
 
-Ejemplo: “Este es un script en el que se comparan algoritmos de ordenamiento. Permite [describir funcionalidades principales].
+Temperatura (°C) — valor numérico flotante.
+
+Fecha de registro — ingresada como cadena "dd/mm/aaaa", y almacenada internamente como objeto datetime para facilitar comparaciones y ordenamiento.
+
+El almacenamiento de las mediciones se realiza mediante un árbol AVL, una estructura de datos auto-balanceada que mantiene sus elementos ordenados y garantiza eficiencia en las operaciones de búsqueda, inserción y eliminación.
+Esto permite que el científico Kevin Kelvin realice consultas rápidas incluso cuando el volumen de datos crece significativamente.
 
 ---
 ## 🏗Arquitectura General
 
-Explica brevemente cómo está organizado el código (funciones y/o clases)
+El código está organizado en módulos y clases:
 
-Las gráficas de los resultados están disponible en la carpeta [data](./data) del proyecto.
+modulos/nodo_avl.py → Implementa el nodo del árbol AVL, con atributos fecha, temperatura, altura, izq, der.
 
-El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
+modulos/arbol_avl.py → Implementa las operaciones del árbol AVL: inserción, rotaciones, eliminación y recorrido.
+
+temperaturas_db.py → Define la clase principal Temperaturas_DB, que actúa como interfaz de la base de datos y utiliza internamente un árbol AVL.
+
+lector_archivo.py → Contiene funciones para leer archivos de muestras (por ejemplo, CSV o TXT) y cargar automáticamente los registros a la base de datos.
+
+main.py → Permite probar todas las funcionalidades: inserción de muestras, consultas por rango, eliminación y conteo.
+
+data/ → Carpeta donde se almacenan archivos de entrada o resultados de consultas.
+
+docs/ → Carpeta donde se encuentra el informe del proyecto.
+
+Complejidad Teórica:
+
+guardar_temperatura → O(log n)
+
+devolver_temperatura → O(log n)
+
+max_temp_rango → O(k + log n)
+
+min_temp_rango → O(k + log n)
+
+temp_extremos_rango → O(k + log n) 
+
+borrar_temperatura → O(log n)
+
+devolver_temperaturas → O(k + log n)
+
+cantidad_muestras → O(1) 
 
 ---
 ## 📑Dependencias
@@ -36,8 +71,12 @@ El informe completo está disponible en la carpeta [docs](./docs) del proyecto.
 ---
 ## 🙎‍♀️🙎‍♂️Autores
 
-- Apellido y Nombre del primer integrante
-- Apellido y Nombre del primer integrante
+- Zapata Mariana Gabriela
+- Weimer Valentin
+- Kerbs Javier
+---
+
+> **Consejo**: Mantén el README **actualizado** conforme evoluciona el proyecto, y elimina (o añade) secciones según necesites. Esta plantilla es sólo un punto de partida general.
 
 ---
 
